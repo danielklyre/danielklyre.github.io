@@ -1,2 +1,0 @@
-# danielklyre.github.io
-Website
