@@ -1,0 +1,304 @@
+@font-face {
+  font-family: 'Cinzel';
+  src: url('../fonts/cinzel_regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cinzel Bold';
+  src: url('../fonts/cinzel_bold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arno Pro Caption';
+  src: url('../fonts/arnopro_caption.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Betmo Regular Cyr';
+  src: url('../fonts/Betmo\ Regular\ Cyr.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Axiforma';
+  src: url('../fonts/Axiforma-Black.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Metamorphous';
+  src: url('../fonts/Metamorphous.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.axiforma {
+  font-family: "Axiforma", sans-serif;
+  font-weight: 400;
+  font-size: 46px;
+  font-style: normal;
+}
+
+.kelly-slab-regular {
+  font-family: "Kelly Slab", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-style: normal;
+}
+
+.marck-script-regular {
+  font-family: "Marck Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Arno Pro Caption', serif;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+/* фон с цветами (замени ссылку на свою) */
+.new-releases-section .bg-overlay {
+  background-image: url("https://leighbardugo.com/wp-content/uploads/2023/09/lbbardugo_florals_bottomleft")
+}
+
+/*########################################################################################################################################*/
+/*                                                          Стиль для Навигации                                                          */
+/*######################################################################################################################################*/
+
+.nav-link:hover {
+  color: #BE9B60;
+}
+
+.navbar {
+    position: relative;
+    background-image: url("../../static/image/navbar/line-up-s1.jpg");
+    background-repeat: repeat-x;
+    background-size: contain; 
+    background-position: left top; 
+}
+
+/*########################################################################################################################################*/
+/*                                                 Стиль для отсечения карусели и footer                                                 */
+/*######################################################################################################################################*/
+
+.slice {
+  width: 100%;
+  height: 12px;
+  background-image: url("../../static/image/navbar/line-bottom.jpg");
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: auto 12px; /* высота — ровно 12px, без вертикального растяжения */
+}
+
+/*########################################################################################################################################*/
+/*                                                          Стиль для Карусели                                                           */
+/*######################################################################################################################################*/
+.book-slide .subtitle {
+  font-family: "Marck Script", cursive;
+  color: #BE9B60;
+  font-size: 2rem;
+  text-shadow: 5px 5px 10px RGBA(0, 0, 0, 1);
+  line-height: 1.5;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-align: inherit;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  font-weight: 400;
+}
+
+.book-slide .title {
+  font-family: "Metamorphous", sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+
+.book-slide .btn {
+  margin-top: 1rem;
+}
+
+.book-slide .description {
+    font-family: "Arno Pro Caption", serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    font-style: normal;
+}
+
+.slide-book-1-background::before, .slide-book-2-background::before, .slide-book-3-background::before, .slide-book-4-background::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* top:0; right:0; bottom:0; left:0 */
+    background: rgba(0, 0, 0, 0.5); /* черный с прозрачностью */
+    z-index: -1; /* слой под контентом */
+}
+
+.slide-book-1-background {
+    position: relative; /* обязательно для псевдоэлемента */
+    background-image: url("../../slide-book-1-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center top; /* выравнивание */
+    background-size: 100% auto; 
+    z-index: 0; 
+}
+
+.slide-book-2-background {
+    position: relative; 
+    background-image: url("../../slide-book-2-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 100% auto;
+    z-index: 0; 
+}
+
+.slide-book-3-background {
+    position: relative; /* обязательно для псевдоэлемента */
+    background-image: url("../../slide-book-3-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center top; 
+    background-size: 100% auto; 
+    z-index: 0; 
+}
+
+.slide-book-4-background {
+    position: relative; /* обязательно для псевдоэлемента */
+    background-image: url("../../slide-book-4-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 100% auto; 
+    z-index: 0; 
+}
+
+div#n2-ss-2 .n2-font-ff48a71cb0d6cee5f2aa6c12d82cb86c-hover {
+    font-family: 'Cinzel';
+    color: #ffffff;
+    font-size: 343.75%;
+    text-shadow: 5px 5px 10px RGBA(0, 0, 0, 1);
+    line-height: 1;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    text-align: inherit;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    font-weight: 400;
+}
+
+.btn-primary {
+  background-color: #493547;   /* основной цвет */
+  border-color: #493547;
+  border-radius: 0;            /* прямоугольная форма */
+  padding: 12px 24px;          /* делаем больше */
+  font-size: 1.1rem;           /* чуть увеличим текст */
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #605C74;   /* цвет при наведении */
+  border-color: #605C74;
+}
+
+
+/* базовое состояние: невидимые и смещённые вниз */
+.carousel-item h2,
+.carousel-item p,
+.carousel-item a {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+/* когда слайд активный — включаем анимацию */
+.carousel-item.active h2 {
+  transition-delay: 0.3s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.carousel-item.active p {
+  transition-delay: 0.6s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.carousel-item.active a {
+  transition-delay: 0.9s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/*########################################################################################################################################*/
+/*                                                          Стиль для Предзаказа                                                         */
+/*######################################################################################################################################*/
+
+.pre-order .description {
+  font-family: "Arno Pro Caption", serif;
+  font-weight: 400;
+  font-size: 21px;
+  font-style: normal;
+}
+
+.pre-order .subtitle {
+  font-family: "Marck Script", cursive;
+  color: #BE9B60;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pre-order .title {
+  font-family: "Metamorphous", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*########################################################################################################################################*/
+/*                                                          Стиль для Footer                                                             */
+/*######################################################################################################################################*/
+
+.footer-text {
+    font-family: "Betmo Regular Cyr", serif;
+    font-weight: 400;
+    font-size: 3rem;
+    font-style: normal;
+    color: rgba(0, 0, 0);
+}
+
+/*.bg-pred::before {
+    content: "";
+    position: absolute;
+    inset: 0; top:0; right:0; bottom:0; left:0; 
+    opacity: 0.9;
+    background: rgba(0, 0, 0, 0.1); 
+    z-index: -1; слой под контентом  
+}*/
+
+.bg-pred {
+    position: relative;
+    background-image: url("../../background.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+
+
+.chern {
+  color: rgba(0, 0, 0);
+}
