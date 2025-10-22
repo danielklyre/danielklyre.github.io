@@ -184,6 +184,15 @@ body {
     z-index: 0; 
 }
 
+.slide-book-5-background {
+    position: relative; /* обязательно для псевдоэлемента */
+    background-image: url("../../slide-book-5-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 100% auto; 
+    z-index: 0; 
+}
+
 div#n2-ss-2 .n2-font-ff48a71cb0d6cee5f2aa6c12d82cb86c-hover {
     font-family: 'Cinzel';
     color: #ffffff;
