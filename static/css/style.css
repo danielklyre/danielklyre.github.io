@@ -81,7 +81,7 @@ body {
 
 .navbar {
     position: relative;
-    background-image: url("../../static/image/navbar/line-up-s1.jpg");
+    background-image: url("../../static/image/navbar/line-up.jpg");
     background-repeat: repeat-x;
     background-size: contain; 
     background-position: left top; 
