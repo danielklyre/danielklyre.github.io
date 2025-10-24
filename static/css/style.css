@@ -1,18 +1,4 @@
 @font-face {
-  font-family: 'Cinzel';
-  src: url('../fonts/cinzel_regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Cinzel Bold';
-  src: url('../fonts/cinzel_bold.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'Arno Pro Caption';
   src: url('../fonts/arnopro_caption.otf') format('truetype');
   font-weight: 400;
@@ -27,30 +13,23 @@
 }
 
 @font-face {
-  font-family: 'Axiforma';
-  src: url('../fonts/Axiforma-Black.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'Metamorphous';
   src: url('../fonts/Metamorphous.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
-.axiforma {
-  font-family: "Axiforma", sans-serif;
+@font-face {
+  font-family: 'Crackhouse_Cyr';
+  src: url('../fonts/Crackhouse_Cyr.otf') format('truetype');
   font-weight: 400;
-  font-size: 46px;
   font-style: normal;
 }
 
-.kelly-slab-regular {
-  font-family: "Kelly Slab", sans-serif;
+.Crackhouse_Cyr {
+  font-family: "Crackhouse_Cyr", serif;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 86px;
   font-style: normal;
 }
 
@@ -61,14 +40,9 @@
 }
 
 body {
-  font-family: 'Arno Pro Caption', serif;
+  font-family: "Arno Pro Caption", serif;
   font-weight: 400;
   color: #ffffff;
-}
-
-/* фон с цветами (замени ссылку на свою) */
-.new-releases-section .bg-overlay {
-  background-image: url("https://leighbardugo.com/wp-content/uploads/2023/09/lbbardugo_florals_bottomleft")
 }
 
 /*########################################################################################################################################*/
@@ -80,6 +54,9 @@ body {
 }
 
 .navbar {
+    padding-top: 0 !important;
+    font-family: "Crackhouse_Cyr", serif;
+    font-size: 42px;
     position: relative;
     background-image: url("../../static/image/navbar/line-up.jpg");
     background-repeat: repeat-x;
@@ -97,7 +74,7 @@ body {
   background-image: url("../../static/image/navbar/line-bottom.jpg");
   background-repeat: repeat-x;
   background-position: top center;
-  background-size: auto 12px; /* высота — ровно 12px, без вертикального растяжения */
+  background-size: auto 12px; 
 }
 
 /*########################################################################################################################################*/
@@ -143,16 +120,16 @@ body {
 .slide-book-1-background::before, .slide-book-2-background::before, .slide-book-3-background::before, .slide-book-4-background::before {
     content: "";
     position: absolute;
-    inset: 0; /* top:0; right:0; bottom:0; left:0 */
-    background: rgba(0, 0, 0, 0.5); /* черный с прозрачностью */
-    z-index: -1; /* слой под контентом */
+    inset: 0; 
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
 }
 
 .slide-book-1-background {
-    position: relative; /* обязательно для псевдоэлемента */
+    position: relative; 
     background-image: url("../../slide-book-1-background.jpg");
     background-repeat: no-repeat;
-    background-position: center top; /* выравнивание */
+    background-position: center top; 
     background-size: 100% auto; 
     z-index: 0; 
 }
@@ -167,7 +144,7 @@ body {
 }
 
 .slide-book-3-background {
-    position: relative; /* обязательно для псевдоэлемента */
+    position: relative;
     background-image: url("../../slide-book-3-background.jpg");
     background-repeat: no-repeat;
     background-position: center top; 
@@ -176,7 +153,7 @@ body {
 }
 
 .slide-book-4-background {
-    position: relative; /* обязательно для псевдоэлемента */
+    position: relative; 
     background-image: url("../../slide-book-4-background.jpg");
     background-repeat: no-repeat;
     background-position: center; 
@@ -185,7 +162,7 @@ body {
 }
 
 .slide-book-5-background {
-    position: relative; /* обязательно для псевдоэлемента */
+    position: relative; 
     background-image: url("../../slide-book-5-background.jpg");
     background-repeat: no-repeat;
     background-position: center; 
@@ -210,21 +187,19 @@ div#n2-ss-2 .n2-font-ff48a71cb0d6cee5f2aa6c12d82cb86c-hover {
 }
 
 .btn-primary {
-  background-color: #493547;   /* основной цвет */
+  background-color: #493547;  
   border-color: #493547;
-  border-radius: 0;            /* прямоугольная форма */
-  padding: 12px 24px;          /* делаем больше */
-  font-size: 1.1rem;           /* чуть увеличим текст */
+  border-radius: 0;            
+  padding: 12px 24px;          
+  font-size: 1.1rem;           
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #605C74;   /* цвет при наведении */
+  background-color: #605C74;   
   border-color: #605C74;
 }
 
-
-/* базовое состояние: невидимые и смещённые вниз */
 .carousel-item h2,
 .carousel-item p,
 .carousel-item a {
@@ -233,7 +208,6 @@ div#n2-ss-2 .n2-font-ff48a71cb0d6cee5f2aa6c12d82cb86c-hover {
   transition: all 0.8s ease;
 }
 
-/* когда слайд активный — включаем анимацию */
 .carousel-item.active h2 {
   transition-delay: 0.3s;
   opacity: 1;
@@ -251,7 +225,6 @@ div#n2-ss-2 .n2-font-ff48a71cb0d6cee5f2aa6c12d82cb86c-hover {
   opacity: 1;
   transform: translateY(0);
 }
-
 
 /*########################################################################################################################################*/
 /*                                                          Стиль для Предзаказа                                                         */
@@ -277,16 +250,65 @@ div#n2-ss-2 .n2-font-ff48a71cb0d6cee5f2aa6c12d82cb86c-hover {
   font-style: normal;
 }
 
+.bg-pred {
+    position: relative;
+    background-image: url("../../background.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+/*########################################################################################################################################*/
+/*                                                          Стиль для Книг                                                               */
+/*######################################################################################################################################*/
+
+.bg-book {
+    position: relative;
+    background-image: url("../../4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.page-with-bg-book {
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+}
+
+.page-with-bg-book header {
+  flex-shrink: 0;
+}
+
+.page-with-bg-book .bg-book {
+  flex: 1 0 auto; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.page-with-bg-book footer {
+  flex-shrink: 0;
+}
+
 /*########################################################################################################################################*/
 /*                                                          Стиль для Footer                                                             */
 /*######################################################################################################################################*/
+
+.bg-footer {
+    position: relative;
+    background-image: url("../../footer-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 
 .footer-text {
     font-family: "Betmo Regular Cyr", serif;
     font-weight: 400;
     font-size: 3rem;
     font-style: normal;
-    color: rgba(0, 0, 0);
+    color: white;
 }
 
 /*.bg-pred::before {
@@ -297,15 +319,6 @@ div#n2-ss-2 .n2-font-ff48a71cb0d6cee5f2aa6c12d82cb86c-hover {
     background: rgba(0, 0, 0, 0.1); 
     z-index: -1; слой под контентом  
 }*/
-
-.bg-pred {
-    position: relative;
-    background-image: url("../../background.jpg");
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
-}
-
 
 
 .chern {
