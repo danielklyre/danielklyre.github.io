@@ -303,6 +303,28 @@ div#n2-ss-2 .n2-font-ff48a71cb0d6cee5f2aa6c12d82cb86c-hover {
   flex-shrink: 0;
 }
 
+.divider-text {
+  font-family: "Metamorphous", serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  position: relative;
+  color: #BE9B60;
+}
+
+.divider-text::before,
+.divider-text::after {
+  content: "";
+  flex-grow: 1;
+  background-color: #BE9B60;
+  height: 2px; 
+  margin: 0 1rem; 
+}
+
 /*########################################################################################################################################*/
 /*                                                          Стиль для Footer                                                             */
 /*######################################################################################################################################*/
@@ -332,7 +354,3 @@ div#n2-ss-2 .n2-font-ff48a71cb0d6cee5f2aa6c12d82cb86c-hover {
     z-index: -1; слой под контентом  
 }*/
 
-
-.chern {
-  color: rgba(0, 0, 0);
-}
