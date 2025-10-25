@@ -235,6 +235,7 @@ div#n2-ss-2 .n2-font-ff48a71cb0d6cee5f2aa6c12d82cb86c-hover {
   font-weight: 400;
   font-size: 21px;
   font-style: normal;
+  text-align: justify;
 }
 
 .pre-order .subtitle {
@@ -256,6 +257,17 @@ div#n2-ss-2 .n2-font-ff48a71cb0d6cee5f2aa6c12d82cb86c-hover {
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
+}
+
+.gold {
+  font-family: "Marck Script", cursive;
+  color: #BE9B60;
+  font-size: 21px;
+}
+
+.white {
+  font-family: "Marck Script", cursive;
+  font-size: 21px;
 }
 
 /*########################################################################################################################################*/
