@@ -127,7 +127,7 @@ body {
 
 .slide-book-1-background {
     position: relative; 
-    background-image: url("../../slide-book-1-background.jpg");
+    background-image: url("../../static/image/backgrounds/slide-book-1-background.jpg");
     background-repeat: no-repeat;
     background-position: center top; 
     background-size: 100% auto; 
@@ -136,7 +136,7 @@ body {
 
 .slide-book-2-background {
     position: relative; 
-    background-image: url("../../slide-book-2-background.jpg");
+    background-image: url("../../static/image/backgrounds/slide-book-2-background.jpg");
     background-repeat: no-repeat;
     background-position: center; 
     background-size: 100% auto;
@@ -145,7 +145,7 @@ body {
 
 .slide-book-3-background {
     position: relative;
-    background-image: url("../../slide-book-3-background.jpg");
+    background-image: url("../../static/image/backgrounds/slide-book-3-background.jpg");
     background-repeat: no-repeat;
     background-position: center top; 
     background-size: 100% auto; 
@@ -154,7 +154,7 @@ body {
 
 .slide-book-4-background {
     position: relative; 
-    background-image: url("../../slide-book-4-background.jpg");
+    background-image: url("../../static/image/backgrounds/slide-book-4-background.jpg");
     background-repeat: no-repeat;
     background-position: center; 
     background-size: 100% auto; 
@@ -163,7 +163,7 @@ body {
 
 .slide-book-5-background {
     position: relative; 
-    background-image: url("../../slide-book-5-background.jpg");
+    background-image: url("../../static/image/backgrounds/slide-book-5-background.jpg");
     background-repeat: no-repeat;
     background-position: center; 
     background-size: 100% auto; 
@@ -253,7 +253,7 @@ div#n2-ss-2 .n2-font-ff48a71cb0d6cee5f2aa6c12d82cb86c-hover {
 
 .bg-pred {
     position: relative;
-    background-image: url("../../background.jpg");
+    background-image: url("../../static/image/backgrounds/background.jpg");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -276,7 +276,7 @@ div#n2-ss-2 .n2-font-ff48a71cb0d6cee5f2aa6c12d82cb86c-hover {
 
 .bg-book {
     position: relative;
-    background-image: url("../../4.jpg");
+    background-image: url("../../static/image/backgrounds/1.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -303,7 +303,7 @@ div#n2-ss-2 .n2-font-ff48a71cb0d6cee5f2aa6c12d82cb86c-hover {
   flex-shrink: 0;
 }
 
-.divider-text {
+.divider-title {
   font-family: "Metamorphous", serif;
   font-weight: 400;
   font-style: normal;
@@ -316,13 +316,43 @@ div#n2-ss-2 .n2-font-ff48a71cb0d6cee5f2aa6c12d82cb86c-hover {
   color: #BE9B60;
 }
 
-.divider-text::before,
-.divider-text::after {
+.divider-title::before,
+.divider-title::after {
   content: "";
   flex-grow: 1;
   background-color: #BE9B60;
   height: 2px; 
   margin: 0 1rem; 
+}
+
+.divider-text {
+  font-family: "Arno Pro Caption", serif;
+  font-weight: 400;
+  font-size: 17px;
+  font-style: normal;
+}
+
+.read-block {
+  position: relative;
+  border-radius: 8px;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.read-block:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+}
+
+.read-block img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.read-block:hover img {
+  transform: scale(1.1) rotate(-5deg);
+  filter: brightness(1.3);
 }
 
 /*########################################################################################################################################*/
@@ -331,7 +361,7 @@ div#n2-ss-2 .n2-font-ff48a71cb0d6cee5f2aa6c12d82cb86c-hover {
 
 .bg-footer {
     position: relative;
-    background-image: url("../../footer-background.jpg");
+    background-image: url("../../static/image/backgrounds/footer-background.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -354,3 +384,25 @@ div#n2-ss-2 .n2-font-ff48a71cb0d6cee5f2aa6c12d82cb86c-hover {
     z-index: -1; слой под контентом  
 }*/
 
+
+/* Основной контент страницы скрыт по умолчанию */
+    #pageContentInner {
+      opacity: 0;
+      pointer-events: none; /* нельзя кликать */
+      transition: opacity 0.5s ease;
+    }
+
+/* Стиль модалки */
+#ageModal .modal-content {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+}
+
+#ageModal .modal-content {
+    background-color: rgba(0, 0, 0, 0.50); /* почти черный фон */
+    color: #fff; /* белый текст для читаемости */
+}
+
+#pageContent {
+      background-color: #000; /* черный фон */
+    }
