@@ -95,11 +95,31 @@
                 <h2 class="title text-center mb-4">Дети Крампуса: Тени Йоля</h2>
                 <h4 class="subtitle text-center">роман • тёмное фэнтези • фолк-хоррор</h4>
                 <p class="paragraph pb-4">В городе посреди болот, где бойни и выделочные цеха кормят всех, дети рано узнают, что страх — часть порядка вещей. Йоль здесь не про подарки: в это время дети стараются не попадаться на глаза и не задавать лишних вопросов. Когда накануне праздника на товарном поезде появляется мальчик без имени, в городе начинают пропадать дети, а старые истории перестают казаться выдумкой. Никто не говорит об этом вслух, но все помнят: Йоль — это договор, и если его нарушить, за долгом приходит тот, кого здесь не называют по имени.</p>
-                <div class="text-center mt-4">
-                    <label for="bookProgress2" class="pb-1 form-label text-d5b583">Прогресс Этапа 0: Черновик</label>
-                    <div class="custom-progress-two">
-                        <div class="custom-progress-bar-two" id="bookProgress2"></div>
-                        <div class="progress-text" id="progressText2">0 / 80 000 слов</div>
+                <div class="text-center mt-4 krampus-progress">
+                    <div class="pb-1 form-label text-d5b583">Прогресс Этапа 0: Черновик</div>
+
+                    <div class="krampus-progress-item">
+                        <label for="bookProgress2Part1" class="krampus-part-title">Часть первая. Мальчик</label>
+                        <div class="custom-progress-two">
+                            <div class="custom-progress-bar-two" id="bookProgress2Part1"></div>
+                            <div class="progress-text" id="progressText2Part1">0 / 20 000 слов</div>
+                        </div>
+                    </div>
+
+                    <div class="krampus-progress-item">
+                        <label for="bookProgress2Part2" class="krampus-part-title">Часть вторая. Йоль</label>
+                        <div class="custom-progress-two">
+                            <div class="custom-progress-bar-two" id="bookProgress2Part2"></div>
+                            <div class="progress-text" id="progressText2Part2">0 / 35 000 слов</div>
+                        </div>
+                    </div>
+
+                    <div class="krampus-progress-item">
+                        <label for="bookProgress2Part3" class="krampus-part-title">Часть третья. Чужой среди своих</label>
+                        <div class="custom-progress-two">
+                            <div class="custom-progress-bar-two" id="bookProgress2Part3"></div>
+                            <div class="progress-text" id="progressText2Part3">0 / 35 000 слов</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -381,37 +401,54 @@
     </script>
 
     <script>
-        const wordsWritten2 = 13328;
-        const wordsGoal2 = 80000;
-
-        const progressBar2 = document.getElementById('bookProgress2');
-        const progressText2 = document.getElementById('progressText2');
-
-        const targetPercent2 = (wordsWritten2 / wordsGoal2) * 100;
-
-        let currentPercent2 = 0;
-        let currentWords2 = 0;
-
-        const duration = 1200; // длительность анимации в мс
-        const intervalTime = 15;
-        const steps = Math.ceil(duration / intervalTime);
-
-        const percentStep = targetPercent2 / steps;
-        const wordsStep = wordsWritten2 / steps;
-
-        const interval2 = setInterval(() => {
-            currentPercent2 += percentStep;
-            currentWords2 += wordsStep;
-
-            if (currentPercent2 >= targetPercent2) {
-                currentPercent2 = targetPercent2;
-                currentWords2 = wordsWritten2;
-                clearInterval(interval2);
+        const krampusParts = [
+            {
+                progressBarId: 'bookProgress2Part1',
+                progressTextId: 'progressText2Part1',
+                wordsWritten: 13328,
+                wordsGoal: 20000
+            },
+            {
+                progressBarId: 'bookProgress2Part2',
+                progressTextId: 'progressText2Part2',
+                wordsWritten: 0,
+                wordsGoal: 35000
+            },
+            {
+                progressBarId: 'bookProgress2Part3',
+                progressTextId: 'progressText2Part3',
+                wordsWritten: 0,
+                wordsGoal: 35000
             }
+        ];
 
-            progressBar2.style.width = currentPercent2 + '%';
-            progressText2.innerText = `${Math.round(currentWords2)} / ${wordsGoal2} слов`;
-        }, intervalTime);
+        krampusParts.forEach(({ progressBarId, progressTextId, wordsWritten, wordsGoal }) => {
+            const progressBar = document.getElementById(progressBarId);
+            const progressText = document.getElementById(progressTextId);
+            const targetPercent = (wordsWritten / wordsGoal) * 100;
+            const duration = 1200;
+            const intervalTime = 15;
+            const steps = Math.ceil(duration / intervalTime);
+            const percentStep = targetPercent / steps;
+            const wordsStep = wordsWritten / steps;
+            let currentPercent = 0;
+            let currentWords = 0;
+
+            const interval = setInterval(() => {
+                currentPercent += percentStep;
+                currentWords += wordsStep;
+
+                if (currentPercent >= targetPercent) {
+                    currentPercent = targetPercent;
+                    currentWords = wordsWritten;
+                    clearInterval(interval);
+                }
+
+                progressBar.style.width = currentPercent + '%';
+                progressText.innerText =
+                    `${Math.round(currentWords).toLocaleString('ru-RU')} / ${wordsGoal.toLocaleString('ru-RU')} слов`;
+            }, intervalTime);
+        });
     </script>
 
     <script>
